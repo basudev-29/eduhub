@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub | Educational Resource Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> EduHub</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#subjects">Subjects</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Your Academic Resource Gateway</h1>
+            <p>Access Syllabus, Lecture Notes, and Previous Year Questions (PYQs) instantly via Google Drive.</p>
+            <div class="search-container">
+                <input type="text" id="subjectSearch" placeholder="Search for your subject (e.g., Anthropology, Physics)..." onkeyup="filterSubjects()">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="subjects-section" id="subjects">
+        <h2>Explore Subjects</h2>
+        <p class="subtitle">Select a subject to access its dedicated Google Drive repositories.</p>
+        
+        <div class="subject-grid" id="subjectGrid">
+            <a href="subjects/anthropology.html" class="subject-card" data-name="anthropology">
+                <div class="card-icon"><i class="fas fa-people-arrows"></i></div>
+                <h3>Anthropology</h3>
+            </a>
+            <a href="subjects/geography.html" class="subject-card" data-name="geography">
+                <div class="card-icon"><i class="fas fa-globe-asia"></i></div>
+                <h3>Geography</h3>
+            </a>
+            <a href="subjects/economics.html" class="subject-card" data-name="economics">
+                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Economics</h3>
+            </a>
+            <a href="subjects/education.html" class="subject-card" data-name="education">
+                <div class="card-icon"><i class="fas fa-apple-alt"></i></div>
+                <h3>Education</h3>
+            </a>
+            <a href="subjects/english.html" class="subject-card" data-name="english">
+                <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                <h3>English</h3>
+            </a>
+            <a href="subjects/hindi.html" class="subject-card" data-name="hindi">
+                <div class="card-icon"><i class="fas fa-language"></i></div>
+                <h3>Hindi</h3>
+            </a>
+            <a href="subjects/music.html" class="subject-card" data-name="music">
+                <div class="card-icon"><i class="fas fa-music"></i></div>
+                <h3>Music</h3>
+            </a>
+            <a href="subjects/history.html" class="subject-card" data-name="history">
+                <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                <h3>History</h3>
+            </a>
+            <a href="subjects/odia.html" class="subject-card" data-name="odia">
+                <div class="card-icon"><i class="fas fa-pen-nib"></i></div>
+                <h3>Odia</h3>
+            </a>
+            <a href="subjects/philosophy.html" class="subject-card" data-name="philosophy">
+                <div class="card-icon"><i class="fas fa-brain"></i></div>
+                <h3>Philosophy</h3>
+            </a>
+            <a href="subjects/political-science.html" class="subject-card" data-name="political science">
+                <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                <h3>Political Science</h3>
+            </a>
+            <a href="subjects/psychology.html" class="subject-card" data-name="psychology">
+                <div class="card-icon"><i class="fas fa-smile"></i></div>
+                <h3>Psychology</h3>
+            </a>
+            <a href="subjects/sanskrit.html" class="subject-card" data-name="sanskrit">
+                <div class="card-icon"><i class="fas fa-scroll"></i></div>
+                <h3>Sanskrit</h3>
+            </a>
+            <a href="subjects/sociology.html" class="subject-card" data-name="sociology">
+                <div class="card-icon"><i class="fas fa-users"></i></div>
+                <h3>Sociology</h3>
+            </a>
+            <a href="subjects/bsw.html" class="subject-card" data-name="bachelor of social work bsw">
+                <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+                <h3>Bachelor of Social Work</h3>
+            </a>
+
+            <a href="subjects/mathematics.html" class="subject-card" data-name="mathematics math">
+                <div class="card-icon"><i class="fas fa-calculator"></i></div>
+                <h3>Mathematics</h3>
+            </a>
+            <a href="subjects/statistics.html" class="subject-card" data-name="statistics stats">
+                <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+                <h3>Statistics</h3>
+            </a>
+            <a href="subjects/biotech.html" class="subject-card" data-name="bio technology biotechnology">
+                <div class="card-icon"><i class="fas fa-dna"></i></div>
+                <h3>Bio Technology</h3>
+            </a>
+            <a href="subjects/botany.html" class="subject-card" data-name="botany plants">
+                <div class="card-icon"><i class="fas fa-seedling"></i></div>
+                <h3>Botany</h3>
+            </a>
+            <a href="subjects/chemistry.html" class="subject-card" data-name="chemistry">
+                <div class="card-icon"><i class="fas fa-flask"></i></div>
+                <h3>Chemistry</h3>
+            </a>
+            <a href="subjects/computer-science.html" class="subject-card" data-name="computer science cs it">
+                <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Computer Science</h3>
+            </a>
+            <a href="subjects/physics.html" class="subject-card" data-name="physics">
+                <div class="card-icon"><i class="fas fa-atom"></i></div>
+                <h3>Physics</h3>
+            </a>
+            <a href="subjects/zoology.html" class="subject-card" data-name="zoology animals">
+                <div class="card-icon"><i class="fas fa-fish"></i></div>
+                <h3>Zoology</h3>
+            </a>
+            <a href="subjects/commerce.html" class="subject-card" data-name="commerce accounting">
+                <div class="card-icon"><i class="fas fa-wallet"></i></div>
+                <h3>Commerce</h3>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EduHub Educational Portal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function filterSubjects() {
+            let input = document.getElementById('subjectSearch').value.toLowerCase();
+            let cards = document.getElementsByClassName('subject-card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].getAttribute('data-name');
+                if (name.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
